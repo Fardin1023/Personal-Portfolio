@@ -1,7 +1,21 @@
 import { useMemo } from "react";
 import { Button } from "@/components/Button";
-import { ArrowRight} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
+const skills = [
+  "React",
+  "Next.js",
+  "Python",
+  "MongoDB",
+  "MYsql",
+  "Tailwind CSS",
+  "Canva",
+  "Java",
+  "AWS",
+  "Git",
+  "Github Actions",
+];
 
 export const Hero = () => {
   const dots = useMemo(
@@ -73,15 +87,58 @@ export const Hero = () => {
             {/* Call to Action Buttons */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
               <button className="relative w-30 h-20 bg-blue-400 text-lg rounded-full">
-      {/* Animated SVG border*/}
-                Contact Me <ArrowRight className="w-5 h-5"/>
+                {/* Animated SVG border*/}
+                Contact Me <ArrowRight className="w-5 h-5" />
               </button>
-              <AnimatedBorderButton/>
+              <AnimatedBorderButton />
             </div>
-            {/* Social Links */}
-            
           </div>
           {/* Right Column -Profile Image */}
+          <div className="relative animate-fade-in animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-600/30 via-transparent to-blue-500/10 blur-2xl animate-pulse" />
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/dp.png"
+                  alt="Fardin Kamran"
+                  className="w-full aspect-[4/5] object cover rounded-2xl"
+                />
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float ">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse" />
+                    <span className="text-sm font-medium">
+                      Available for Work{" "}
+                    </span>
+                  </div>
+                  {/* Stats Badge */}
+                  <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                    <div className="text-2xl font-bold text-blue-700">2+</div>
+                    <div className="text-xs text-muted-foreground">
+                      {" "}
+                      Years Exp.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Skills Section */}
+        <div className="mt-20 animate-fade-in animation-delay-600">
+          <p className="text-sm text-muted-foreground mb-6 text-center">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                <div key={idx} className="flex-shrink-0 px-8 py-4">
+                  <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground">{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
