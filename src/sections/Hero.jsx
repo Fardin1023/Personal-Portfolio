@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Button } from "@/components/Button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight} from "lucide-react";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 export const Hero = () => {
   const dots = useMemo(
@@ -70,27 +71,15 @@ export const Hero = () => {
               </p>
             </div>
             {/* Call to Action Buttons */}
-            <div>
-              <button className="lg items-center bg-blue-600 text-black hover:bg-blue-900 rounded-full hover:text-white animate-fade-in animation-delay-300">
+            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+              <button className="relative w-30 h-20 bg-blue-400 text-lg rounded-full">
+      {/* Animated SVG border*/}
                 Contact Me <ArrowRight className="w-5 h-5"/>
               </button>
-              <button>
-                  {/* Animated SVG border*/}
-                  <svg className="absolute left-0 top-0 w-full h-full pointer-events-auto viewBox="0 0 200 60" preserveAspectRatio="none" style={{overflow:"visible"}}
-                  >
-                    <path
-                    d="M 30,1 A 29, 29 0 0 0 1,30 L 1, 30 A 29,29 0 0 0 30,59 L"
-                    fill="none" stroke="var(--color-primary)"
-                    strokeWidth="2"
-                    strokeDasharray="400 550"
-                    strokeDashoffset="400"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="download-cv-path"
-                    />
-                  </svg>
-              </button>
+              <AnimatedBorderButton/>
             </div>
+            {/* Social Links */}
+            
           </div>
           {/* Right Column -Profile Image */}
         </div>

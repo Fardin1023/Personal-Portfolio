@@ -107,7 +107,24 @@
         animation-delay:600ms;
     }
     .animation-delay-800{
-        animation-delay:8s;
+        animation-delay:800ms;
+    }
+    @keyframes animated-border{
+        0%{
+            stroke-dashoffset: 400;
+        }
+        100%{
+            stroke-dashoffset: -550;
+        }
+    }
+    .group:hover .animated-border-path{
+        animation: animated-border 1.5s linear infinite;
+    }
+    
+    .animated-border:hover{
+        background-color:color-mix(in srgb, #0096FF 15%, transparent);
+        backdrop-filter: blur(16px);
+        box-shadow:0 0 25px color-mix(in srgb, #3F00FF 20%, transparent);
     }
 
 }
