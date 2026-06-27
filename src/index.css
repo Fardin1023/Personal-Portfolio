@@ -36,6 +36,9 @@
     .font-serif{
         font-family: "Playfair Display",serif;
     }
+    .font-times{
+        font-family: "Playfair Display",'Times New Roman', Times, serif;
+    }
 }
 @layer components{
     .glass{
@@ -106,7 +109,7 @@
         }
         
     }
-
+   
     .animate-fade-in{
         animation:fade-in 0.8s ease-out both;
     }
@@ -116,6 +119,8 @@
     }
 
     .animate-marquee{
+        display: flex;
+        width: max-content;
         animation: marquee 30s linear infinite;
     }
     .animation-delay-100{
