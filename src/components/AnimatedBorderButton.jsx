@@ -1,30 +1,54 @@
 import { Download } from "lucide-react";
 
-export const AnimatedBorderButton = () => {
+export const AnimatedBorderButton = ( {children}) => {
   return (
-    <button className="relative bg-transparent border border-border text-foreground hover:border-primary/50 transition-all duration-1000 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed group px-8 py-4 text-lg font-medium rounded-full overflow-visible animated-border">
-      {/* Animated SVG border*/}
+    <button
+      className="
+        relative
+        group
+        overflow-hidden
+        rounded-full
+        border
+        border-blue-500/30
+        px-8
+        py-4
+        text-lg
+        font-medium
+        text-white
+        transition-all
+        duration-300
+        hover:scale-105
+        hover:border-blue-400
+      "
+    >
+      {/* Animated Border */}
       <svg
-        className="absolute left-0 top-0 w-full h-full pointer-events-auto"
-        viewBox="0 0 200 60"
+        className="absolute inset-0 h-full w-full"
+        viewBox="0 0 220 60"
         preserveAspectRatio="none"
-        style={{ overflow: "visible" }}
       >
-        <path
-          d="M 30,1 A 29, 29 0 0 0 1,30 L 1, 30 A 29,29 0 0 0 30,59 L"
+        <rect
+          x="1.5"
+          y="1.5"
+          width="217"
+          height="57"
+          rx="28"
+          ry="28"
           fill="none"
-          stroke="var(--color-primary)"
-          strokeWidth="2"
-          strokeDasharray="400 550"
-          strokeDashoffset="400"
-          strokeLinecap="round"
-          strokeLinejoin="round  "
+          stroke="#3B82F6"
+          strokeWidth="2.5"
+          strokeDasharray="560"
+          strokeDashoffset="560"
           className="animated-border-path"
         />
       </svg>
-      <span className="relative z-10 flex items-center justify-center gap-2">
-        <Download  className=" w-5 h-5"/>
-        Download CV
+
+      {/* Glow */}
+      <div className="absolute inset-0 rounded-full bg-blue-500/10 blur-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+      {/* Button Content */}
+      <span className="relative z-10 flex items-center gap-2">
+      {children}
       </span>
     </button>
   );

@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import {
   ArrowRight,
   ChevronDown,
+  Download,
 } from "lucide-react";
 import {
   FaGithub,
@@ -98,68 +99,86 @@ export const Hero = () => {
               </p>
             </div>
 
-            {/* Buttons */}
-           <div className="animate-fade-in animation-delay-300 space-y-6">
+           {/* Social Media */}
+<div className="animate-fade-in animation-delay-300 space-y-6">
 
-  {/* Buttons */}
-  <div className="mt-8">
-  <p className="mb-4 text-sm uppercase tracking-[0.3em] text-muted-foreground">
-    Follow Me
-  </p>
+  <div>
+    <p className="mb-4 text-sm uppercase tracking-[0.3em] text-muted-foreground">
+      Follow Me
+    </p>
 
-  <div className="flex items-center gap-6">
-    {/* GitHub */}
-    <a
-      href="https://github.com/YOUR_USERNAME"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-3"
-    >
-      <div className="rounded-full border border-white/20 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:scale-110">
-        <FaGithub className="text-2xl text-white" />
-      </div>
+    <div className="flex items-center gap-6">
 
-      <span className="hidden md:block text-muted-foreground group-hover:text-white">
-        GitHub
-      </span>
-    </a>
+      {/* GitHub */}
+      <a
+        href="https://github.com/YOUR_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center gap-3"
+      >
+        <div className="rounded-full border border-white/20 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:scale-110">
+          <FaGithub className="text-2xl text-white" />
+        </div>
 
-    {/* LinkedIn */}
-    <a
-      href="https://linkedin.com/in/YOUR_USERNAME"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-3"
-    >
-      <div className="rounded-full border border-white/20 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:scale-110">
-        <FaLinkedin className="text-2xl text-[#0A66C2]" />
-      </div>
+        <span className="hidden md:block text-muted-foreground group-hover:text-white transition">
+          GitHub
+        </span>
+      </a>
 
-      <span className="hidden md:block text-muted-foreground group-hover:text-white">
-        LinkedIn
-      </span>
-    </a>
+      {/* LinkedIn */}
+      <a
+        href="https://linkedin.com/in/YOUR_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center gap-3"
+      >
+        <div className="rounded-full border border-white/20 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:scale-110">
+          <FaLinkedin className="text-2xl text-[#0A66C2]" />
+        </div>
 
-    {/* Facebook */}
-    <a
-      href="https://facebook.com/YOUR_USERNAME"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-3"
-    >
-      <div className="rounded-full border border-white/20 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:scale-110">
-        <FaFacebook className="text-2xl text-[#1877F2]" />
-      </div>
+        <span className="hidden md:block text-muted-foreground group-hover:text-white transition">
+          LinkedIn
+        </span>
+      </a>
 
-      <span className="hidden md:block text-muted-foreground group-hover:text-white">
-        Facebook
-      </span>
-    </a>
+      {/* Facebook */}
+      <a
+        href="https://facebook.com/YOUR_USERNAME"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group flex items-center gap-3"
+      >
+        <div className="rounded-full border border-white/20 p-3 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:scale-110">
+          <FaFacebook className="text-2xl text-[#1877F2]" />
+        </div>
+
+        <span className="hidden md:block text-muted-foreground group-hover:text-white transition">
+          Facebook
+        </span>
+      </a>
+
+    </div>
   </div>
-</div>
-</div>
-          </div>
 
+  {/* CTA Buttons */}
+  <div className="flex flex-wrap gap-4">
+
+    {/* Contact */}
+    <button className="flex items-center gap-2 rounded-full bg-blue-500 px-8 py-4 text-lg font-medium text-white transition-all duration-300 hover:bg-blue-600 hover:scale-105">
+      Contact Me
+      <ArrowRight className="w-5 h-5" />
+    </button>
+
+    {/* Download CV */}
+    <AnimatedBorderButton>
+      <Download className="w-5 h-5"/>
+      Download CV
+    </AnimatedBorderButton>
+
+  </div>
+
+</div>
+</div>
           {/* Right */}
           <div className="relative animate-fade-in animation-delay-300">
             <div className="relative max-w-md mx-auto">
