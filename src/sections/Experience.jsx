@@ -31,6 +31,32 @@ export const Experience = () => {
             world and aiming to build larger than life projects.
           </p>
         </div>
+        {/* Timeline */}
+        <div className="relative">
+          <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-750 via-blue-300 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+
+          {/* Experience*/}
+          <div className="space-y-12">
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
+              style={{animationDelay:`${(idx + 1) * 150} ms`}}>
+                <div></div>
+                {/* Timeline dots*/}
+                <div></div>
+
+                {/* Content*/}
+                <div className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text" :"md:col-start-2 md:pl-16 "}`}>
+                  <div>
+                    <span>{exp.period}</span>
+                    <h3>{exp.role}</h3>
+                    <p>{exp.company}</p>
+                    <p>{exp.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
