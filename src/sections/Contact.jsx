@@ -1,4 +1,6 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Button } from "@/components/Button";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -22,6 +24,15 @@ const contactInfo = [
 ];
 
 export const Contact = () => {
+  const [formData, setFormData] =useState({
+    name:"",
+    email:"",
+    message:""
+  });
+  const handleSubmit =async(e) =>{
+    e.preventDefault();
+
+  }
   return (
     <section id="contact" className="py-32 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full">
@@ -59,7 +70,10 @@ export const Contact = () => {
                   id="name"
                   type="text"
                   required
-                  placeholder="Type your name....."
+                  placeholder=" Type your name....."
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData,name:e.target.value})} 
                   className="w-full px py-3 bg-surface rounded-xl border border-border focus:border-blue-900 focus:ring-1 focus:to-blue-600 outline-none transition-all"
                 />
               </div>
@@ -70,9 +84,14 @@ export const Contact = () => {
                 >
                   Email
                 </label>
-                <input id="email" type="email"
-                required
-                placeholder="your@email.com...."
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder=" your@email.com...."
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData,email:e.target.value})} 
                   className="w-full px py-3 bg-surface rounded-xl border border-border focus:border-blue-900 focus:ring-1 focus:to-blue-600 outline-none transition-all"
                 />
               </div>
@@ -84,13 +103,22 @@ export const Contact = () => {
                   Message
                 </label>
                 <textarea
-                rows={5}
-                required
-                placeholder="Your message"
-
+                  rows={5}
+                  required
+                  placeholder=" Your message"
+                  value={formData.message}
+                  onChange={(e) =>
+                    setFormData({ ...formData,message:e.target.value})} 
                   className="w-full px py-3 bg-surface rounded-xl border border-border focus:border-blue-900 focus:ring-1 focus:to-blue-600 outline-none transition-all resize-none"
                 />
               </div>
+              <Button
+                className="w-full flex items-center justify-center gap-2"
+                type="submit" size="lg"
+              >
+                Send Message
+                <Send />
+              </Button>
             </form>
           </div>
         </div>

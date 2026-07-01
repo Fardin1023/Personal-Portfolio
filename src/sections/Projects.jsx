@@ -16,8 +16,8 @@ export const Projects = () => {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       {/* BG Glows */}
-      <dv className="absolute top-1/4 right-0 w-96 bg-blue-700 rounded-full blur-3xl"></dv>
-      <dv className="absolute top-1/4 right-0 w-64 bg-highlight/5 rounded-full blur-3xl"></dv>
+      <div className="absolute top-1/4 right-0 w-96 bg-blue-700 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 right-0 w-64 bg-highlight/5 rounded-full blur-3xl"></div>
       <div className="container mx-auto px-6 relative z-10">
         {/* Section header */}
         <div className="text-center mx-auto max-w-3xl mb-16">
