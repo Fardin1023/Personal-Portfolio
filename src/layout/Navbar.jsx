@@ -1,78 +1,126 @@
-import { Button } from "@/components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Expereince" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#about", label: "About" },
+  { href: "#about", label: "About", id: "about" },
+  { href: "#projects", label: "Projects", id: "projects" },
+  { href: "#experience", label: "Experience", id: "experience" },
+  { href: "#certificates", label: "Certificates", id: "certificates" },
+  { href: "#contact", label: "Contact", id: "contact" },
 ];
+
 export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scroll > 50);
+    let frame = null;
+    const onScroll = () => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 24);
+        frame = null;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame) cancelAnimationFrame(frame);
+    };
   }, []);
+
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.getElementById(link.id))
+      .filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-35% 0px -55% 0px", threshold: [0, 0.1, 0.25] }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const closeMenu = () => setIsMobileMenuOpen(false);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500${isScrolled ? "glass-strong py-3" : "bg-transparent py-5"} z-50`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "py-3" : "py-5"
+      }`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="site-container flex items-center justify-between">
         <a
-          href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          href="#top"
+          className="group text-lg font-black tracking-[-0.04em] text-white"
+          aria-label="Go to top"
         >
-          FK<span className="text-primary">.</span>
+          FK<span className="text-blue-400 transition-colors group-hover:text-cyan-300">.</span>
         </a>
-        <div className="hidden md:flex items-center gap-1">
-          <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
-            {navLinks.map((link, index) => (
-              <a
-                href={link.href}
-                key={index}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full transition-colors duration-300 hover:bg-surface/50"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <button size="sm">Contact Me</button>
-        </div>
-        {/*Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer rounded-full hover:bg-surface/50 transition-colors duration-300"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+
+        <div
+          className={`hidden items-center rounded-full border px-1.5 py-1 md:flex transition-all duration-300 ${
+            isScrolled
+              ? "border-white/10 bg-[#0b1120]/82 shadow-[0_12px_45px_rgba(0,0,0,.28)] backdrop-blur-xl"
+              : "border-white/[0.07] bg-white/[0.035] backdrop-blur-md"
+          }`}
         >
-          {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              className={`rounded-full px-4 py-2 text-sm transition-all duration-300 ${
+                activeSection === link.id
+                  ? "bg-white/[0.08] text-white"
+                  : "text-slate-400 hover:text-white"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <a
+          href="#contact"
+          className="hidden text-sm font-semibold text-slate-200 transition-colors hover:text-blue-300 md:block"
+        >
+          Let&apos;s talk <span className="text-blue-400">↗</span>
+        </a>
+
+        <button
+          type="button"
+          className="rounded-full border border-white/10 bg-white/[0.04] p-2.5 text-white md:hidden"
+          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          aria-label="Toggle navigation"
+          aria-expanded={isMobileMenuOpen}
+        >
+          {isMobileMenuOpen ? <X size={19} /> : <Menu size={19} />}
         </button>
       </nav>
-      {/*Mobile Menu*/}
+
       {isMobileMenuOpen && (
-        <div className="md:hidden glass-strong rounded-lg mt-2 mx-4 pt-4 pb-2 animate-fade-in">
-          <div className="container mx-auto px-6 py-6 flex flex-col items-start gap-4">
-            {navLinks.map((link, index) => (
+        <div className="site-container mt-3 md:hidden">
+          <div className="rounded-2xl border border-white/10 bg-[#0b1120]/95 p-3 shadow-2xl backdrop-blur-xl">
+            {navLinks.map((link) => (
               <a
+                key={link.id}
                 href={link.href}
-                key={index}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="text-lg text-muted-foreground hover:text-foreground py-2"
+                onClick={closeMenu}
+                className="block rounded-xl px-4 py-3 text-sm text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
               >
                 {link.label}
               </a>
             ))}
-            <Button onClick={() => setIsMobileMenuOpen(false)} size="sm">
-              Contact Me
-            </Button>
           </div>
         </div>
       )}

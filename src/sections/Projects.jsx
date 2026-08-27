@@ -1,99 +1,87 @@
-import { ArrowUpRight } from "lucide-react";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { ArrowUpRight, Code2, Layers3 } from "lucide-react";
+import { Reveal } from "../components/Reveal";
 
 const projects = [
   {
     title: "Aura-Mosaic Store",
+    type: "Full-stack e-commerce platform",
     description:
-      "Aura-Mosaic is a sophisticated, comprehensive e-commerce platform that seamlessly bridges an intuitive user interface with a robust backend architecture to deliver a dynamic storefront. Gated exclusively for authenticated users, the system meticulously manages active shopping carts, personalized wishlists, historical acquisitions, and a granular search-and-filter engine. Elevating the consumer experience, it incorporates an advanced cryptographic session framework alongside an intelligent conversational agent capable of rendering tailored product recommendations, curated gift ensembles, and side-by-side product comparisons.",
-    image: "/project/ui.png",
-    tags: ["React", "TailwindCSS", "NodeJS"],
-    github: "#",
+      "An authenticated e-commerce experience with cart and wishlist flows, granular search and filtering, product discovery, cryptographic session concepts and an intelligent conversational layer for recommendations and comparisons.",
+    image: "/optimized/aura-mosaic.webp",
+    tags: ["React", "Tailwind CSS", "Node.js", "AI Integration"],
   },
 ];
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
-      {/* BG Glows */}
-      <div className="absolute top-1/4 right-0 w-96 bg-blue-700 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/4 right-0 w-64 bg-highlight/5 rounded-full blur-3xl"></div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section header */}
-        <div className="text-center mx-auto max-w-3xl mb-16">
-          <span className="text-cyan-400 text-sm font-medium tracking-wider uppercase animate-fade-in ">
-            Featured Work
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-blue-400">
-            Projects that
-            <span> make an impact.</span>
+    <section id="projects" className="section-shell cv-auto">
+      <div className="site-container">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <span className="section-kicker">Featured work</span>
+          <h2 className="section-title mt-4">
+            Projects built to solve
+            <span className="text-gradient"> real problems.</span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
-            Some of my recent works, complex web applications that is very much
-            able to solve real world problems with better solutions and
-            suggestions as well.
+          <p className="section-copy mx-auto mt-5 max-w-2xl">
+            A selection of products where I focus on usable interfaces, strong
+            engineering foundations and thoughtful technical details.
           </p>
-        </div>
+        </Reveal>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
-              style={{ animationDelay: `${(idx + 1) * 100} ms` }}
-            >
-              {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
+        <div className="mt-14 space-y-8">
+          {projects.map((project, index) => (
+            <Reveal key={project.title} delay={100 + index * 80}>
+              <article className="project-card group grid overflow-hidden lg:grid-cols-[1.08fr_.92fr]">
+                <div className="relative min-h-[280px] overflow-hidden bg-[#0a0f1b] sm:min-h-[360px]">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} interface preview`}
+                    loading="lazy"
+                    decoding="async"
+                    width="1400"
+                    height="693"
+                    className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0b1120]/50 via-transparent to-transparent" />
+                  <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/35 px-3 py-1.5 text-xs text-slate-200 backdrop-blur-md">
+                    Featured project
+                  </div>
+                </div>
 
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-blue-500 hover:text-black transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
+                <div className="flex flex-col justify-between p-7 sm:p-9 lg:p-10">
+                  <div>
+                    <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[.18em] text-blue-300">
+                      <Layers3 size={15} /> {project.type}
+                    </div>
+                    <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+                      {project.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-slate-400 sm:text-[15px]">
+                      {project.description}
+                    </p>
+                  </div>
 
-              {/* Content */}
-              <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-blue-600 transition-colors">
-                    {project.title}
-                  </h3>
-                  <ArrowUpRight className="w-5 h-5 text-blue-600 group-hover:text-shadow-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  <div className="mt-8">
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="tech-pill">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-8 flex items-center justify-between border-t border-white/[0.07] pt-5">
+                      <span className="flex items-center gap-2 text-sm text-slate-500">
+                        <Code2 size={16} /> Case study
+                      </span>
+                      <span className="flex items-center gap-1 text-sm font-semibold text-blue-300 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
+                        Explore <ArrowUpRight size={17} />
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-shadow-amber-100 text-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIdx) => (
-                    <span
-                      key={tagIdx}
-                      className="px-4 py-1.5 rounded-full bg-surface text-sx font-medium border border-border/50 text-white hover:border-blue-600 hover:text-blue-400 transition-all duration-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+              </article>
+            </Reveal>
           ))}
-        </div>
-        {/* View All */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
         </div>
       </div>
     </section>

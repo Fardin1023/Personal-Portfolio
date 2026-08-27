@@ -1,72 +1,56 @@
+import { BriefcaseBusiness } from "lucide-react";
+import { Reveal } from "../components/Reveal";
+
 const experiences = [
   {
-    period: "2025-2026",
-    role: "It Operator",
+    period: "2025 — 2026",
+    role: "IT Operator",
     company: "Synergy Business Solutions",
-    description: "Dealt with IP routing and Addressing",
+    description: "Worked with IP routing and addressing in day-to-day IT operations.",
     current: false,
   },
 ];
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
-      <div className="absolute top-1/2 blur-3xl -translate-y-1/2" />
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Setion header*/}
-        <div className="max-w-3xl mb-16">
-          <span className="text-blue-800 text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Career Journey
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-blue-300">
-            Experience that{" "}
-            <span className="font-serif italic font-normal text-cyan-500">
-              {" "}
-              speaks volumes.
-            </span>
-          </h2>
-          <p className="text-white animate-fade-in animation-delay-200">
-            A timeline of my professional growth, from curious begineer to an
-            individual that is aiming to make a name for himself in the tech
-            world and aiming to build larger than life projects.
-          </p>
-        </div>
-        {/* Timeline */}
-        <div className="relative">
-          <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-750 via-blue-300 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+    <section id="experience" className="section-shell cv-auto">
+      <div className="site-container">
+        <div className="grid gap-14 lg:grid-cols-[.8fr_1.2fr] lg:gap-20">
+          <Reveal>
+            <span className="section-kicker">Career journey</span>
+            <h2 className="section-title mt-4">
+              Experience that
+              <span className="block font-serif font-normal italic text-cyan-300">
+                keeps moving forward.
+              </span>
+            </h2>
+            <p className="section-copy mt-5 max-w-lg">
+              Practical experience that continues to shape how I approach systems,
+              troubleshooting, communication and technical problem solving.
+            </p>
+          </Reveal>
 
-          {/* Experience*/}
-          <div className="space-y-12">
-            {experiences.map((exp, idx) => (
-              <div
-                key={idx}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 150} ms` }}
-              >
-                <div></div>
-                {/* Timeline dots*/}
-                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-cyan-600 rounded-full -translate-x-1/2 ring-4 ring-background z-10">
-                {exp.current && <span className="absolute inset-0 rounded-full bg-cyan-800 animate-ping opacity-75"/>}
-                </div>
-
-                {/* Content*/}
-                <div
-                  className={`pl-8 md:pl-0 ${idx % 2 === 0 ? "md:pr-16 md:text" : "md:col-start-2 md:pl-16 "}`}
-                >
-                  <div
-                    className={`glass p-6 rounded-2xl border border-blue-300 hover:border-blue-600 transition-all duration-500`}
-                  >
-                    <span className="text-sm text-cyan-400 font-medium">
-                      {exp.period}
-                    </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground ">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground mt-4">
-                      {exp.description}
-                    </p>
+          <div className="relative pl-7 sm:pl-10">
+            <div className="absolute bottom-3 left-[5px] top-3 w-px bg-gradient-to-b from-blue-400 via-cyan-400/60 to-transparent sm:left-[9px]" />
+            {experiences.map((experience, index) => (
+              <Reveal key={`${experience.role}-${experience.period}`} delay={100 + index * 80}>
+                <article className="timeline-card relative">
+                  <span className="absolute -left-[31px] top-8 grid h-3 w-3 place-items-center rounded-full bg-cyan-300 shadow-[0_0_0_6px_rgba(34,211,238,.08),0_0_22px_rgba(34,211,238,.5)] sm:-left-[43px]" />
+                  <div className="flex flex-wrap items-start justify-between gap-4">
+                    <div>
+                      <span className="text-sm font-semibold text-cyan-300">{experience.period}</span>
+                      <h3 className="mt-2 text-2xl font-semibold text-white">{experience.role}</h3>
+                      <p className="mt-1 text-slate-400">{experience.company}</p>
+                    </div>
+                    <div className="feature-icon !mb-0 !h-11 !w-11">
+                      <BriefcaseBusiness size={19} />
+                    </div>
                   </div>
-                </div>
-              </div>
+                  <p className="mt-6 border-t border-white/[0.07] pt-5 text-sm leading-6 text-slate-400">
+                    {experience.description}
+                  </p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </div>
