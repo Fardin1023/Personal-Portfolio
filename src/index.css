@@ -1104,3 +1104,2123 @@
     transition: none !important;
   }
 }
+/* ==========================================================
+   FINAL TYPOGRAPHY SYSTEM
+   ROBOTO + MERRIWEATHER
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   GLOBAL FONT
+   ---------------------------------------------------------- */
+
+html,
+body {
+  font-family:
+    "Roboto",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+body {
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+
+/* ----------------------------------------------------------
+   ROBOTO — UI / MODERN TYPOGRAPHY
+   ---------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+textarea,
+select,
+nav,
+.section-title,
+.hero-heading {
+  font-family:
+    "Roboto",
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+}
+
+
+/* ----------------------------------------------------------
+   MERRIWEATHER — EDITORIAL TYPOGRAPHY
+   ---------------------------------------------------------- */
+
+.font-serif,
+.hero-heading-serif {
+  font-family:
+    "Merriweather",
+    Georgia,
+    "Times New Roman",
+    serif !important;
+}
+
+
+/* ==========================================================
+   HERO HEADING
+   ========================================================== */
+
+.hero-heading {
+  max-width: 760px;
+
+  color: #ffffff;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  /*
+    Reduced from the previous huge 5.8rem.
+    Desktop maximum = 4.45rem.
+  */
+  font-size: clamp(
+    2.75rem,
+    5.3vw,
+    4.45rem
+  );
+
+  font-weight: 800;
+
+  line-height: 1.01;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* Merriweather portion */
+
+.hero-heading-serif {
+  max-width: 700px;
+
+  color: #dce5f2;
+
+  font-size: 0.62em;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.28;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* Slightly soften the gradient */
+
+.hero-heading .text-gradient {
+  background:
+    linear-gradient(
+      110deg,
+      #93c5fd 5%,
+      #60a5fa 37%,
+      #3b82f6 65%,
+      #67e8f9 100%
+    );
+
+  background-clip: text;
+
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+
+/* ==========================================================
+   ALL SECTION HEADINGS
+   ========================================================== */
+
+.section-title {
+  max-width: 780px;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  /*
+    Previous:
+    clamp(2.4rem, 5vw, 4.4rem)
+
+    New:
+    noticeably smaller and cleaner.
+  */
+  font-size: clamp(
+    2rem,
+    3.8vw,
+    3.35rem
+  );
+
+  font-weight: 750;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* Any Merriweather line inside a section heading */
+
+.section-title .font-serif {
+  margin-top: 0.2em;
+
+  font-family:
+    "Merriweather",
+    serif !important;
+
+  font-size: 0.82em;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.28;
+
+  letter-spacing: -0.025em;
+}
+
+
+/*
+   Projects currently uses text-gradient
+   instead of font-serif.
+
+   This automatically gives that highlighted
+   part the Roboto + Merriweather combination.
+*/
+
+.section-title > .text-gradient {
+  font-family:
+    "Merriweather",
+    Georgia,
+    serif;
+
+  font-size: 0.88em;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* ==========================================================
+   SECTION LABELS
+   ========================================================== */
+
+.section-kicker {
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.19em;
+}
+
+
+/* ==========================================================
+   BODY COPY
+   ========================================================== */
+
+.section-copy {
+  max-width: 650px;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size: 0.95rem;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  letter-spacing: 0;
+}
+
+
+/* ==========================================================
+   ABOUT QUOTE
+   ========================================================== */
+
+.quote-card .font-serif {
+  font-family:
+    "Merriweather",
+    Georgia,
+    serif !important;
+
+  font-size: clamp(
+    1rem,
+    1.6vw,
+    1.18rem
+  );
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.85;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+
+nav,
+nav a,
+nav button {
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-weight: 500;
+}
+
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.primary-link-button,
+.animated-outline,
+button {
+  font-family:
+    "Roboto",
+    sans-serif;
+}
+
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.timeline-card h3,
+.project-card h3,
+.feature-card h3 {
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-weight: 650;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* ==========================================================
+   TECHNOLOGY MARQUEE
+   ========================================================== */
+
+.skill-word {
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-weight: 600;
+
+  letter-spacing: -0.01em;
+}
+
+
+/* ==========================================================
+   CERTIFICATE SECTION
+   ========================================================== */
+
+/*
+  Keeps certificate heading medium-sized too.
+  Does NOT affect your flip animation.
+*/
+
+#certificates .section-title {
+  font-size: clamp(
+    2rem,
+    3.7vw,
+    3.25rem
+  );
+}
+
+
+/* ==========================================================
+   EXPERIENCE SECTION
+   ========================================================== */
+
+#experience .section-title {
+  font-size: clamp(
+    2rem,
+    3.7vw,
+    3.3rem
+  );
+}
+
+
+/* ==========================================================
+   CONTACT SECTION
+   ========================================================== */
+
+#contact .section-title {
+  max-width: 680px;
+
+  font-size: clamp(
+    2rem,
+    3.7vw,
+    3.3rem
+  );
+}
+
+
+/* ==========================================================
+   PROJECT SECTION
+   ========================================================== */
+
+#projects .section-title {
+  max-width: 760px;
+
+  margin-inline: auto;
+
+  font-size: clamp(
+    2rem,
+    3.7vw,
+    3.35rem
+  );
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+  .hero-heading {
+    max-width: 580px;
+
+    font-size: clamp(
+      2.45rem,
+      10vw,
+      3.45rem
+    );
+
+    line-height: 1.03;
+
+    letter-spacing: -0.04em;
+  }
+
+
+  .hero-heading-serif {
+    margin-top: 0.65rem;
+
+    font-size: 0.59em;
+
+    line-height: 1.32;
+  }
+
+
+  .section-title {
+    font-size: clamp(
+      1.95rem,
+      8vw,
+      2.7rem
+    );
+
+    line-height: 1.12;
+
+    letter-spacing: -0.03em;
+  }
+
+
+  .section-title .font-serif {
+    font-size: 0.8em;
+  }
+
+
+  .section-copy {
+    font-size: 0.92rem;
+
+    line-height: 1.7;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+  .hero-heading {
+    font-size: clamp(
+      2.3rem,
+      11.5vw,
+      3rem
+    );
+  }
+
+
+  .hero-heading-serif {
+    font-size: 0.57em;
+  }
+
+
+  .section-title,
+  #projects .section-title,
+  #experience .section-title,
+  #certificates .section-title,
+  #contact .section-title {
+    font-size: clamp(
+      1.85rem,
+      9vw,
+      2.35rem
+    );
+  }
+
+}
+/* ==========================================================
+   EDUCATION SECTION
+   ========================================================== */
+
+.education-heading {
+  max-width: 720px;
+}
+
+
+/* ==========================================================
+   TIMELINE
+   ========================================================== */
+
+.education-timeline {
+  position: relative;
+
+  max-width: 900px;
+
+  margin-top: 3.5rem;
+
+  margin-left: auto;
+}
+
+
+/* Vertical timeline */
+
+.education-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 8px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(96, 165, 250, 0),
+      rgba(96, 165, 250, 0.45) 8%,
+      rgba(34, 211, 238, 0.23) 70%,
+      rgba(96, 165, 250, 0)
+    );
+}
+
+
+/* ==========================================================
+   ENTRY
+   ========================================================== */
+
+.education-entry {
+  position: relative;
+
+  padding-left: 3rem;
+
+  margin-bottom: 1rem;
+}
+
+
+.education-entry:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================
+   TIMELINE MARKER
+   ========================================================== */
+
+.education-marker {
+  position: absolute;
+
+  top: 2.2rem;
+  left: 0;
+
+  z-index: 2;
+
+  display: grid;
+
+  width: 17px;
+  height: 17px;
+
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(96, 165, 250, 0.35);
+
+  border-radius: 50%;
+
+  background: #060913;
+
+  box-shadow:
+    0 0 0 5px
+      rgba(59, 130, 246, 0.035);
+}
+
+
+.education-marker span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #60a5fa;
+
+  box-shadow:
+    0 0 15px
+      rgba(96, 165, 250, 0.75);
+}
+
+
+/* Featured university marker */
+
+.education-entry--featured
+.education-marker span {
+  background: #67e8f9;
+
+  box-shadow:
+    0 0 18px
+      rgba(103, 232, 249, 0.8);
+}
+
+
+/* ==========================================================
+   EDUCATION CARD
+   ========================================================== */
+
+.education-entry-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 1.55rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 1.35rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.012)
+    );
+
+  box-shadow:
+    0 18px 50px
+      rgba(0, 0, 0, 0.16);
+
+  transition:
+    transform 320ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color 300ms ease,
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+}
+
+
+.education-entry-card:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    rgba(96, 165, 250, 0.17);
+
+  box-shadow:
+    0 25px 60px
+      rgba(0, 0, 0, 0.22);
+}
+
+
+/* ==========================================================
+   FEATURED UNIVERSITY CARD
+   ========================================================== */
+
+.education-entry--featured
+.education-entry-card {
+  padding: clamp(
+    1.6rem,
+    3vw,
+    2rem
+  );
+
+  border-color:
+    rgba(96, 165, 250, 0.15);
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(59, 130, 246, 0.1),
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(255, 255, 255, 0.014)
+    );
+}
+
+
+/* Small ambient glow */
+
+.education-entry--featured
+.education-entry-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  top: -170px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(34, 211, 238, 0.12),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ==========================================================
+   TOP AREA
+   ========================================================== */
+
+.education-entry-top {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 1rem;
+}
+
+
+/* Icon */
+
+.education-entry-icon {
+  display: grid;
+
+  width: 2.8rem;
+  height: 2.8rem;
+
+  flex-shrink: 0;
+
+  place-items: center;
+
+  border:
+    1px solid
+    rgba(96, 165, 250, 0.14);
+
+  border-radius: 0.85rem;
+
+  background:
+    rgba(59, 130, 246, 0.07);
+
+  color: #60a5fa;
+}
+
+
+.education-entry--featured
+.education-entry-icon {
+  width: 3.1rem;
+  height: 3.1rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(59, 130, 246, 0.14),
+      rgba(34, 211, 238, 0.06)
+    );
+
+  color: #67e8f9;
+}
+
+
+/* ==========================================================
+   META INFORMATION
+   ========================================================== */
+
+.education-entry-meta {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    flex-end;
+
+  flex-wrap: wrap;
+
+  gap: 0.6rem;
+
+  margin-left: auto;
+}
+
+
+.education-type {
+  color: #64748b;
+
+  font-size: 0.66rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+}
+
+
+.education-period {
+  padding:
+    0.38rem
+    0.66rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.065);
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  color: #94a3b8;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size: 0.69rem;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.education-entry-content {
+  position: relative;
+
+  z-index: 1;
+
+  margin-top: 1.3rem;
+}
+
+
+.education-entry-content h3 {
+  max-width: 660px;
+
+  color: #f8fafc;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size: clamp(
+    1.12rem,
+    2vw,
+    1.45rem
+  );
+
+  font-weight: 650;
+
+  line-height: 1.3;
+
+  letter-spacing:
+    -0.028em;
+}
+
+
+.education-entry--featured
+.education-entry-content h3 {
+  font-size: clamp(
+    1.3rem,
+    2.4vw,
+    1.72rem
+  );
+}
+
+
+/* Institution */
+
+.education-school {
+  margin-top: 0.45rem;
+
+  color: #7dd3fc;
+
+  font-size: 0.88rem;
+
+  font-weight: 500;
+}
+
+
+/* ==========================================================
+   DETAILS
+   ========================================================== */
+
+.education-entry-details {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    0.65rem
+    1.25rem;
+
+  margin-top: 1rem;
+}
+
+
+.education-entry-details span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.42rem;
+
+  color: #64748b;
+
+  font-size: 0.76rem;
+}
+
+
+.education-entry-details svg {
+  color: #60a5fa;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (
+  max-width: 900px
+) {
+
+  .education-timeline {
+    max-width: none;
+
+    margin-left: 0;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (
+  max-width: 640px
+) {
+
+  .education-timeline {
+    margin-top: 2.5rem;
+  }
+
+
+  .education-timeline::before {
+    left: 6px;
+  }
+
+
+  .education-entry {
+    padding-left: 2rem;
+  }
+
+
+  .education-marker {
+    left: -2px;
+
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .education-entry-card,
+  .education-entry--featured
+  .education-entry-card {
+    padding: 1.2rem;
+
+    border-radius: 1.1rem;
+  }
+
+
+  .education-entry-top {
+    align-items:
+      flex-start;
+  }
+
+
+  .education-entry-icon {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+
+  .education-entry--featured
+  .education-entry-icon {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+
+  .education-entry-meta {
+    flex-direction: column;
+
+    align-items:
+      flex-end;
+
+    gap: 0.35rem;
+  }
+
+
+  .education-type {
+    font-size: 0.6rem;
+  }
+
+
+  .education-period {
+    font-size: 0.62rem;
+  }
+
+
+  .education-entry-content {
+    margin-top: 1.15rem;
+  }
+
+
+  .education-entry-content h3,
+  .education-entry--featured
+  .education-entry-content h3 {
+    font-size: 1.15rem;
+  }
+
+
+  .education-school {
+    font-size: 0.82rem;
+  }
+
+
+  .education-entry-details {
+    flex-direction: column;
+
+    align-items:
+      flex-start;
+
+    gap: 0.55rem;
+  }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .education-entry-card {
+    transition: none !important;
+  }
+
+
+  .education-entry-card:hover {
+    transform: none;
+  }
+
+}
+/* ==========================================================
+   PROJECTS — SCALABLE SHOWCASE
+   ========================================================== */
+
+.projects-heading {
+  max-width: 100%;
+}
+
+
+.projects-heading-row {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content:
+    space-between;
+
+  gap: 4rem;
+}
+
+
+.projects-intro {
+  max-width: 440px;
+
+  margin-bottom:
+    0.35rem;
+}
+
+
+/* ==========================================================
+   PROJECT LIST
+   ========================================================== */
+
+.projects-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: clamp(
+    4.5rem,
+    8vw,
+    7.5rem
+  );
+
+  margin-top:
+    clamp(
+      3.5rem,
+      7vw,
+      5.5rem
+    );
+}
+
+
+/* ==========================================================
+   PROJECT SHOWCASE
+   ========================================================== */
+
+.project-showcase {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(340px, 0.85fr);
+
+  align-items: center;
+
+  gap: clamp(
+    2.2rem,
+    6vw,
+    5.5rem
+  );
+}
+
+
+/* Alternate projects */
+
+.project-showcase--reverse
+.project-showcase-media {
+  order: 2;
+}
+
+
+.project-showcase--reverse
+.project-showcase-content {
+  order: 1;
+}
+
+
+/* ==========================================================
+   MEDIA AREA
+   ========================================================== */
+
+.project-showcase-media {
+  min-width: 0;
+}
+
+
+.project-media {
+  position: relative;
+
+  min-height: 380px;
+
+  overflow: visible;
+
+  border-radius:
+    1.55rem;
+}
+
+
+/* ==========================================================
+   MAIN PROJECT IMAGE
+   ========================================================== */
+
+.project-main-image {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.085
+    );
+
+  border-radius:
+    1.5rem;
+
+  background:
+    #09111e;
+
+  box-shadow:
+    0 30px 80px
+    rgba(
+      0,
+      0,
+      0,
+      0.28
+    );
+
+  transform:
+    translateZ(0);
+
+  transition:
+    transform
+      450ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color
+      300ms
+      ease,
+    box-shadow
+      400ms
+      ease;
+}
+
+
+.project-main-image img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio:
+    16 / 9;
+
+  object-fit: cover;
+
+  object-position:
+    top;
+
+  transition:
+    transform
+      700ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+/* Hover */
+
+.project-media:hover
+.project-main-image {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    rgba(
+      96,
+      165,
+      250,
+      0.18
+    );
+
+  box-shadow:
+    0 38px 95px
+    rgba(
+      0,
+      0,
+      0,
+      0.33
+    );
+}
+
+
+.project-media:hover
+.project-main-image img {
+  transform:
+    scale(1.018);
+}
+
+
+/* ==========================================================
+   SECONDARY SCREENSHOT
+   ========================================================== */
+
+.project-secondary-image {
+  position: absolute;
+
+  right: -1.5rem;
+
+  bottom: -2rem;
+
+  z-index: 3;
+
+  width: 43%;
+
+  overflow: hidden;
+
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.13
+    );
+
+  border-radius:
+    1rem;
+
+  background:
+    #08101d;
+
+  box-shadow:
+    0 25px 60px
+    rgba(
+      0,
+      0,
+      0,
+      0.48
+    );
+
+  transform:
+    rotate(1.5deg)
+    translateZ(0);
+
+  transition:
+    transform
+      450ms
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color
+      300ms
+      ease;
+}
+
+
+.project-secondary-image img {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio:
+    16 / 9;
+
+  object-fit: cover;
+
+  object-position:
+    top;
+}
+
+
+.project-media:hover
+.project-secondary-image {
+  transform:
+    rotate(0deg)
+    translate(
+      -5px,
+      -6px
+    );
+
+  border-color:
+    rgba(
+      103,
+      232,
+      249,
+      0.24
+    );
+}
+
+
+/* ==========================================================
+   MEDIA GRADIENT
+   ========================================================== */
+
+.project-media-gradient {
+  position: absolute;
+
+  z-index: -1;
+
+  width: 50%;
+
+  height: 60%;
+
+  right: 5%;
+
+  bottom: -8%;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        34,
+        211,
+        238,
+        0.085
+      ),
+      transparent 70%
+    );
+
+  filter:
+    blur(35px);
+
+  pointer-events: none;
+}
+
+
+/* Reverse glow position */
+
+.project-showcase--reverse
+.project-media-gradient {
+  right: auto;
+
+  left: 5%;
+}
+
+
+/* ==========================================================
+   PROJECT CONTENT
+   ========================================================== */
+
+.project-showcase-content {
+  position: relative;
+
+  max-width: 520px;
+}
+
+
+/* ==========================================================
+   PROJECT META
+   ========================================================== */
+
+.project-meta-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+
+  margin-bottom:
+    1.15rem;
+}
+
+
+.project-number {
+  color:
+    rgba(
+      96,
+      165,
+      250,
+      0.45
+    );
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size:
+    0.68rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+}
+
+
+.project-type {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    0.45rem;
+
+  color:
+    #67e8f9;
+
+  font-size:
+    0.67rem;
+
+  font-weight:
+    700;
+
+  letter-spacing:
+    0.14em;
+
+  text-transform:
+    uppercase;
+}
+
+
+/* ==========================================================
+   TITLE
+   ========================================================== */
+
+.project-title {
+  color:
+    #f8fafc;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size:
+    clamp(
+      1.75rem,
+      3vw,
+      2.45rem
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    1.08;
+
+  letter-spacing:
+    -0.035em;
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+   ========================================================== */
+
+.project-description {
+  max-width:
+    500px;
+
+  margin-top:
+    1.15rem;
+
+  color:
+    #94a3b8;
+
+  font-size:
+    0.93rem;
+
+  line-height:
+    1.75;
+}
+
+
+/* ==========================================================
+   TAGS
+   ========================================================== */
+
+.project-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  margin-top:
+    1.5rem;
+}
+
+
+/* Existing tech-pill works,
+   this adds smoother hover */
+
+.project-tags
+.tech-pill {
+  transition:
+    color
+      220ms
+      ease,
+    border-color
+      220ms
+      ease,
+    background-color
+      220ms
+      ease,
+    transform
+      220ms
+      ease;
+}
+
+
+.project-tags
+.tech-pill:hover {
+  border-color:
+    rgba(
+      96,
+      165,
+      250,
+      0.18
+    );
+
+  background:
+    rgba(
+      59,
+      130,
+      246,
+      0.06
+    );
+
+  color:
+    #e2e8f0;
+
+  transform:
+    translateY(-2px);
+}
+
+
+/* ==========================================================
+   PROJECT BUTTONS
+   ========================================================== */
+
+.project-actions {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  margin-top:
+    2rem;
+}
+
+
+.project-primary-link,
+.project-secondary-link {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    0.5rem;
+
+  min-height:
+    44px;
+
+  padding:
+    0.7rem
+    1rem;
+
+  border-radius:
+    999px;
+
+  font-family:
+    "Roboto",
+    sans-serif;
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    600;
+
+  transition:
+    transform
+      250ms
+      ease,
+    border-color
+      250ms
+      ease,
+    background-color
+      250ms
+      ease,
+    box-shadow
+      250ms
+      ease,
+    color
+      250ms
+      ease;
+}
+
+
+/* Live demo */
+
+.project-primary-link {
+  border:
+    1px solid
+    rgba(
+      59,
+      130,
+      246,
+      0.22
+    );
+
+  background:
+    linear-gradient(
+      110deg,
+      #2563eb,
+      #0891b2
+    );
+
+  color:
+    white;
+
+  box-shadow:
+    0 10px 30px
+    rgba(
+      37,
+      99,
+      235,
+      0.14
+    );
+}
+
+
+.project-primary-link:hover {
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 14px 35px
+    rgba(
+      37,
+      99,
+      235,
+      0.22
+    );
+}
+
+
+/* GitHub */
+
+.project-secondary-link {
+  border:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.09
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.025
+    );
+
+  color:
+    #cbd5e1;
+}
+
+
+.project-secondary-link:hover {
+  transform:
+    translateY(-2px);
+
+  border-color:
+    rgba(
+      96,
+      165,
+      250,
+      0.17
+    );
+
+  background:
+    rgba(
+      59,
+      130,
+      246,
+      0.05
+    );
+
+  color:
+    white;
+}
+
+
+/* ==========================================================
+   PROJECTS FOOTER
+   ========================================================== */
+
+.projects-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content:
+    space-between;
+
+  gap: 2rem;
+
+  margin-top:
+    clamp(
+      4rem,
+      8vw,
+      6rem
+    );
+
+  padding-top:
+    1.5rem;
+
+  border-top:
+    1px solid
+    rgba(
+      255,
+      255,
+      255,
+      0.065
+    );
+}
+
+
+.projects-footer p {
+  color:
+    #64748b;
+
+  font-size:
+    0.83rem;
+}
+
+
+.projects-footer a {
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    0.5rem;
+
+  color:
+    #cbd5e1;
+
+  font-size:
+    0.8rem;
+
+  font-weight:
+    600;
+
+  transition:
+    color
+      220ms
+      ease,
+    transform
+      220ms
+      ease;
+}
+
+
+.projects-footer a:hover {
+  color:
+    #67e8f9;
+
+  transform:
+    translateX(2px);
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (
+  max-width: 1024px
+) {
+
+  .projects-heading-row {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap:
+      1.5rem;
+  }
+
+
+  .projects-intro {
+    max-width:
+      620px;
+  }
+
+
+  .project-showcase,
+  .project-showcase--reverse {
+    grid-template-columns:
+      1fr;
+
+    gap:
+      3.5rem;
+  }
+
+
+  .project-showcase--reverse
+  .project-showcase-media,
+  .project-showcase--reverse
+  .project-showcase-content {
+    order:
+      initial;
+  }
+
+
+  .project-showcase-content {
+    max-width:
+      680px;
+  }
+
+
+  .project-media {
+    min-height:
+      auto;
+  }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (
+  max-width: 640px
+) {
+
+  .projects-list {
+    gap:
+      4.5rem;
+
+    margin-top:
+      3rem;
+  }
+
+
+  .project-main-image {
+    border-radius:
+      1rem;
+  }
+
+
+  .project-main-image img {
+    aspect-ratio:
+      16 / 10;
+  }
+
+
+  /* Keep second screenshot
+     inside the card on mobile */
+
+  .project-secondary-image {
+    right:
+      0.6rem;
+
+    bottom:
+      -1.3rem;
+
+    width:
+      46%;
+
+    border-radius:
+      0.7rem;
+  }
+
+
+  .project-showcase {
+    gap:
+      2.7rem;
+  }
+
+
+  .project-meta-row {
+    margin-bottom:
+      0.9rem;
+  }
+
+
+  .project-title {
+    font-size:
+      1.7rem;
+  }
+
+
+  .project-description {
+    font-size:
+      0.88rem;
+
+    line-height:
+      1.7;
+  }
+
+
+  .project-actions {
+    align-items:
+      stretch;
+
+    flex-direction:
+      column;
+  }
+
+
+  .project-primary-link,
+  .project-secondary-link {
+    width:
+      100%;
+  }
+
+
+  .projects-footer {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap:
+      1rem;
+  }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL MOBILE
+   ========================================================== */
+
+@media (
+  max-width: 420px
+) {
+
+  .project-secondary-image {
+    width:
+      49%;
+  }
+
+
+  .project-title {
+    font-size:
+      1.55rem;
+  }
+
+}
+
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (
+  prefers-reduced-motion:
+    reduce
+) {
+
+  .project-main-image,
+  .project-main-image img,
+  .project-secondary-image,
+  .project-tags
+  .tech-pill,
+  .project-primary-link,
+  .project-secondary-link,
+  .projects-footer a {
+    transition:
+      none !important;
+  }
+
+
+  .project-media:hover
+  .project-main-image,
+  .project-media:hover
+  .project-secondary-image,
+  .project-media:hover
+  .project-main-image img,
+  .project-tags
+  .tech-pill:hover,
+  .project-primary-link:hover,
+  .project-secondary-link:hover,
+  .projects-footer
+  a:hover {
+    transform:
+      none;
+  }
+
+}
