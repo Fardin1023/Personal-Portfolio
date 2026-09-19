@@ -176,7 +176,7 @@ const projects = [
 
     github: null,
 
-    live: null,
+    live: "https://cohiva.vercel.app/",
 
     caseStudy: {
       problem:
