@@ -18,6 +18,16 @@ const certificates = [
     image: "/certificates/tech-support.webp",
     pdf: "/certificates/tech-support.pdf",
   },
+  {
+    title: "Introduction to SQL",
+    image: "/certificates/introduction-to-sql.webp",
+    pdf: "/certificates/introduction-to-sql.pdf",
+  },
+  {
+    title: "Decoding Responsible AI: Upholding Pillars of Trust",
+    image: "/certificates/responsible-ai.webp",
+    pdf: "/certificates/responsible-ai.pdf",
+  },
 ];
 
 export const Certificates = () => {
