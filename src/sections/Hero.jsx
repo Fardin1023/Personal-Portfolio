@@ -208,17 +208,6 @@ export const Hero = () => {
                 />
               </div>
 
-              {/* Experience badge */}
-              <div className="absolute -left-5 top-7 rounded-2xl border border-white/10 bg-[#0b1120]/88 px-4 py-3 shadow-xl backdrop-blur-md">
-                <div className="text-xl font-bold text-blue-400">
-                  2+
-                </div>
-
-                <div className="mt-0.5 text-xs text-slate-400">
-                  Years of experience
-                </div>
-              </div>
-
               {/* Availability badge */}
               <div className="absolute -bottom-4 right-4 flex items-center gap-2 rounded-full border border-white/10 bg-[#0b1120]/90 px-4 py-2.5 text-sm text-slate-200 shadow-xl backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_14px_rgba(52,211,153,.7)]" />
