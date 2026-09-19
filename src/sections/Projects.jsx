@@ -125,6 +125,88 @@ const projects = [
         "A deployed end-to-end finance product with a Vercel frontend and Render backend, designed around practical day-to-day money tracking.",
     },
   },
+
+
+  {
+    title: "Cohiva",
+
+    type: "Real-Time Meeting & Classroom Platform",
+
+    category: "Real-Time Collaboration",
+
+    description:
+      "A full-stack real-time meeting and virtual classroom platform built without third-party video conferencing services, featuring custom WebRTC communication, host controls, synchronized collaboration tools and secure meeting management.",
+
+    images: [
+      "/optimized/cohiva-dashboard.webp",
+      "/optimized/cohiva-new-meeting.webp",
+      "/optimized/cohiva-classroom.webp",
+    ],
+
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "WebRTC",
+      "mediasoup",
+      "MongoDB",
+      "Docker",
+      "Vercel",
+    ],
+
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Mongoose",
+      "WebRTC",
+      "mediasoup",
+      "WebSockets",
+      "Excalidraw",
+      "Vercel Blob",
+      "Nodemailer",
+      "Resend SMTP",
+      "Coturn",
+      "Docker",
+      "Docker Compose",
+      "Vercel",
+    ],
+
+    github: null,
+
+    live: null,
+
+    caseStudy: {
+      problem:
+        "Most online meeting products depend on external conferencing providers, limiting control over authentication, meeting permissions, media infrastructure and classroom-specific collaboration. Cohiva was built to provide those capabilities through a custom full-stack architecture.",
+
+      solution:
+        "Cohiva combines secure custom authentication with live audio/video, screen sharing, realtime chat and reactions, a synchronized Excalidraw whiteboard, waiting-room controls, attendance tracking, password recovery, host-only recording and complete meeting lifecycle management.",
+
+      architecture:
+        "The web application uses Next.js and React with MongoDB for persistent data and custom session-based authentication. Realtime media runs through a separate Node.js WebRTC/mediasoup RTC architecture with WebSocket signaling and Coturn TURN/STUN support. The web application is deployed on Vercel, while private recordings are stored in Vercel Blob and RTC services run separately through Docker-based infrastructure.",
+
+      features: [
+        "Custom sign-up, sign-in, logout, profile editing and password reset",
+        "Live camera, microphone and screen sharing",
+        "Custom mediasoup-based realtime participant communication",
+        "Host-controlled waiting room and meeting access permissions",
+        "Realtime chat, reactions and raise-hand functionality",
+        "Teacher-controlled synchronized Excalidraw whiteboard",
+        "Late-join whiteboard state synchronization",
+        "Host-only meeting recording with private playback, download and deletion",
+        "Attendance tracking with join/leave times, duration and CSV export",
+        "Participant limits, meeting access modes and lifecycle controls",
+        "End-for-everyone controls and server-side authorization for host-only actions",
+        "Production deployment with separate web, RTC, TURN and recording-storage layers",
+      ],
+
+      outcome:
+        "Cohiva demonstrates an end-to-end production architecture for realtime collaboration built from the ground up, covering secure application logic, custom media transport, synchronized classroom tools, host governance, persistent data and deployment infrastructure without relying on a third-party video conferencing service.",
+    },
+  },
 ];
 
 
@@ -571,7 +653,7 @@ const ProjectCaseStudy = ({
 
             <div className="project-case-tech">
 
-              {project.tags.map(
+              {(project.technologies ?? project.tags).map(
                 (tag) => (
                   <span
                     key={tag}
