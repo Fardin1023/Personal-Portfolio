@@ -31,15 +31,15 @@ export const Experience = () => {
           </Reveal>
 
           <div className="relative pl-7 sm:pl-10">
-            <div className="absolute bottom-3 left-[5px] top-3 w-px bg-gradient-to-b from-blue-400 via-cyan-400/60 to-transparent sm:left-[9px]" />
+            <div className="experience-line absolute bottom-3 left-[5px] top-3 w-px sm:left-[9px]" />
             {experiences.map((experience, index) => (
               <Reveal key={`${experience.role}-${experience.period}`} delay={100 + index * 80}>
                 <article className="timeline-card relative">
-                  <span className="absolute -left-[31px] top-8 grid h-3 w-3 place-items-center rounded-full bg-cyan-300 shadow-[0_0_0_6px_rgba(34,211,238,.08),0_0_22px_rgba(34,211,238,.5)] sm:-left-[43px]" />
+                  <span className="experience-dot absolute -left-[31px] top-8 grid h-3 w-3 place-items-center rounded-full sm:-left-[43px]" />
                   <div className="flex flex-wrap items-start justify-between gap-4">
                     <div>
-                      <span className="text-sm font-semibold text-cyan-300">{experience.period}</span>
-                      <h3 className="mt-2 text-2xl font-semibold text-white">{experience.role}</h3>
+                      <span className="experience-period text-sm font-semibold">{experience.period}</span>
+                      <h3 className="mt-2 text-2xl font-semibold">{experience.role}</h3>
                       <p className="mt-1 text-slate-400">{experience.company}</p>
                     </div>
                     <div className="feature-icon !mb-0 !h-11 !w-11">

@@ -67,36 +67,27 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "py-3" : "py-5"
+      className={`portfolio-navbar fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        isScrolled ? "portfolio-navbar--scrolled py-3" : "py-5"
       }`}
     >
       <nav className="site-container flex items-center justify-between gap-4">
         <a
           href="#top"
-          className="group shrink-0 text-lg font-black tracking-[-0.04em] text-white"
+          className="portfolio-logo group shrink-0 text-lg font-black tracking-[-0.04em]"
           aria-label="Go to top"
           onClick={closeMobileMenu}
         >
-          FK
-          <span className="text-blue-400 transition-colors group-hover:text-cyan-300">.</span>
+          FK<span>.</span>
         </a>
 
-        <div
-          className={`hidden items-center rounded-full border px-1.5 py-1 lg:flex transition-all duration-300 ${
-            isScrolled
-              ? "border-white/10 bg-[#0b1120]/82 shadow-[0_12px_45px_rgba(0,0,0,.28)] backdrop-blur-xl"
-              : "border-white/[0.07] bg-white/[0.035] backdrop-blur-md"
-          }`}
-        >
+        <div className="portfolio-nav-links hidden items-center rounded-full border px-1.5 py-1 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.id}
               href={link.href}
-              className={`rounded-full px-3 py-2 text-[12.5px] transition-all duration-300 ${
-                activeSection === link.id
-                  ? "bg-white/[0.08] text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,.035)]"
-                  : "text-slate-400 hover:bg-white/[0.035] hover:text-white"
+              className={`portfolio-nav-link rounded-full px-3 py-2 text-[12.5px] transition-all duration-300 ${
+                activeSection === link.id ? "is-active" : ""
               }`}
             >
               {link.label}
@@ -117,17 +108,14 @@ export const Navbar = () => {
             <kbd>⌘K</kbd>
           </button>
 
-          <a
-            href="#contact"
-            className="inline-flex items-center text-sm font-semibold text-slate-200 transition-colors hover:text-cyan-300"
-          >
-            Let&apos;s talk <span className="ml-1 text-blue-400">↗</span>
+          <a href="#contact" className="portfolio-talk-link">
+            Let&apos;s talk <span>↗</span>
           </a>
         </div>
 
         <button
           type="button"
-          className="rounded-full border border-white/10 bg-white/[0.04] p-2.5 text-white transition hover:bg-white/[0.07] lg:hidden"
+          className="portfolio-menu-button lg:hidden"
           onClick={() => setIsMobileMenuOpen((previous) => !previous)}
           aria-label="Toggle navigation"
           aria-expanded={isMobileMenuOpen}
@@ -138,16 +126,14 @@ export const Navbar = () => {
 
       {isMobileMenuOpen && (
         <div className="site-container mt-3 lg:hidden">
-          <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0b1120]/95 p-2 shadow-2xl backdrop-blur-xl">
+          <div className="portfolio-mobile-menu">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={closeMobileMenu}
-                className={`block rounded-xl px-4 py-3 text-sm transition-all duration-200 ${
-                  activeSection === link.id
-                    ? "bg-white/[0.07] text-white"
-                    : "text-slate-300 hover:bg-white/[0.05] hover:text-white"
+                className={`portfolio-mobile-link ${
+                  activeSection === link.id ? "is-active" : ""
                 }`}
               >
                 {link.label}
@@ -159,11 +145,7 @@ export const Navbar = () => {
               <kbd>⌘K</kbd>
             </button>
 
-            <a
-              href="#contact"
-              onClick={closeMobileMenu}
-              className="mt-1 flex items-center justify-between rounded-xl border border-blue-400/10 bg-blue-500/10 px-4 py-3 text-sm font-semibold text-blue-300 transition hover:bg-blue-500/15 hover:text-cyan-200"
-            >
+            <a href="#contact" onClick={closeMobileMenu} className="portfolio-mobile-contact">
               Contact Me
               <span>↗</span>
             </a>

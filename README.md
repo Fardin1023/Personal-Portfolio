@@ -4,8 +4,8 @@ A responsive personal portfolio built with React, Vite, and Tailwind CSS. The si
 
 ## Features
 
-- Responsive single-page portfolio layout
-- Hero, About, Education, Research, Projects, Experience, Certificates, and Contact sections
+- Responsive single-page portfolio layout with a green-and-white visual system
+- Portrait-led Hero, About, Education, Research, Projects, Experience, Certificates, and Contact sections
 - Keyboard command palette (`Ctrl/Cmd + K`)
 - CV preview and download experience
 - Project detail modals and certificate previews

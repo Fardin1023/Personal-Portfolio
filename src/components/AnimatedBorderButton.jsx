@@ -6,7 +6,7 @@ export const AnimatedBorderButton = ({
 }) => {
   return (
     <Tag
-      className={`animated-outline group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 text-base font-semibold text-white ${className}`}
+      className={`animated-outline group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-7 py-3.5 text-base font-semibold ${className}`}
       {...props}
     >
       <span className="animated-outline__shine" aria-hidden="true" />
