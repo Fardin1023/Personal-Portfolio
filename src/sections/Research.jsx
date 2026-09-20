@@ -140,7 +140,7 @@ export const Research = () => {
             <span className="section-kicker">Undergraduate Research</span>
             <h2 className="section-title mt-4">
               Exploring how LLMs can
-              <span className="block font-serif font-normal italic text-cyan-300">
+              <span className="block font-serif font-normal italic text-[#9DBCBC]">
                 improve software quality.
               </span>
             </h2>

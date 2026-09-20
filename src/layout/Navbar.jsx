@@ -95,7 +95,7 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="hidden shrink-0 items-center gap-2 lg:flex">
+        <div className="desktop-nav-actions hidden shrink-0 items-center gap-2 lg:flex">
           <button
             type="button"
             className="nav-command-button"
@@ -125,7 +125,7 @@ export const Navbar = () => {
       </nav>
 
       {isMobileMenuOpen && (
-        <div className="site-container mt-3 lg:hidden">
+        <div className="mobile-nav-shell site-container mt-3 lg:hidden">
           <div className="portfolio-mobile-menu">
             {navLinks.map((link) => (
               <a

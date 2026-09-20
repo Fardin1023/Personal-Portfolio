@@ -20,7 +20,7 @@ export const Experience = () => {
             <span className="section-kicker">Career journey</span>
             <h2 className="section-title mt-4">
               Experience that
-              <span className="block font-serif font-normal italic text-cyan-300">
+              <span className="block font-serif font-normal italic text-[#9DBCBC]">
                 keeps moving forward.
               </span>
             </h2>
@@ -40,13 +40,13 @@ export const Experience = () => {
                     <div>
                       <span className="experience-period text-sm font-semibold">{experience.period}</span>
                       <h3 className="mt-2 text-2xl font-semibold">{experience.role}</h3>
-                      <p className="mt-1 text-slate-400">{experience.company}</p>
+                      <p className="mt-1 text-[#B7B7B7]">{experience.company}</p>
                     </div>
                     <div className="feature-icon !mb-0 !h-11 !w-11">
                       <BriefcaseBusiness size={19} />
                     </div>
                   </div>
-                  <p className="mt-6 border-t border-white/[0.07] pt-5 text-sm leading-6 text-slate-400">
+                  <p className="mt-6 border-t border-[#9DBCBC]/60 pt-5 text-sm leading-6 text-[#B7B7B7]">
                     {experience.description}
                   </p>
                 </article>

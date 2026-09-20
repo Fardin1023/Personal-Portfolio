@@ -822,7 +822,7 @@ export const Projects = () => {
                 <h2 className="section-title mt-4">
                   Projects built with
 
-                  <span className="block font-serif font-normal italic text-cyan-300">
+                  <span className="block font-serif font-normal italic text-[#9DBCBC]">
                     purpose and curiosity.
                   </span>
                 </h2>

@@ -38,13 +38,13 @@ export const About = () => {
               <span className="section-kicker">About me</span>
               <h2 className="section-title mt-4">
                 Building the future,
-                <span className="block font-serif font-normal italic text-slate-300">
+                <span className="block font-serif font-normal italic text-[#FFF5BB]">
                   one thoughtful component at a time.
                 </span>
               </h2>
             </Reveal>
 
-            <Reveal delay={90} className="mt-7 space-y-5 text-[15px] leading-7 text-slate-400 md:text-base">
+            <Reveal delay={90} className="mt-7 space-y-5 text-[15px] leading-7 text-[#B7B7B7] md:text-base">
               <p>
                 I&apos;m a technically versatile developer and researcher who enjoys
                 solving layered problems across full-stack development, software
@@ -61,7 +61,7 @@ export const About = () => {
 
             <Reveal delay={160} className="mt-8">
               <div className="quote-card">
-                <p className="font-serif text-xl italic leading-8 text-slate-200">
+                <p className="font-serif text-xl italic leading-8 text-[#FFF5BB]">
                   “My goal is to combine practical software engineering with AI and
                   research to build systems that are useful, scalable and easier to
                   understand.”
@@ -78,7 +78,7 @@ export const About = () => {
                     <Icon size={21} />
                   </div>
                   <h3 className="mt-5 text-lg font-semibold text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">{description}</p>
+                  <p className="mt-2 text-sm leading-6 text-[#B7B7B7]">{description}</p>
                 </article>
               </Reveal>
             ))}

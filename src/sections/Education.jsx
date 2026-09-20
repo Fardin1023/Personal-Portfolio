@@ -47,7 +47,7 @@ export const Education = () => {
 
             <h2 className="section-title mt-4">
               Building a strong
-              <span className="block font-serif font-normal italic text-cyan-300">
+              <span className="block font-serif font-normal italic text-[#9DBCBC]">
                 foundation in technology.
               </span>
             </h2>

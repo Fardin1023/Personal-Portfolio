@@ -6,7 +6,7 @@ export const Button = ({
   ...props
 }) => {
   const baseClasses =
-    "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-60";
+    "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#FFF5BB] focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-60";
 
   const sizeClasses = {
     sm: "px-4 py-2 text-sm",
@@ -16,11 +16,11 @@ export const Button = ({
 
   const variantClasses = {
     primary:
-      "bg-emerald-700 text-white shadow-[0_10px_35px_rgba(21,128,61,0.18)] hover:-translate-y-0.5 hover:bg-emerald-600 hover:shadow-[0_14px_40px_rgba(21,128,61,0.24)]",
+      "bg-[#FFF5BB] text-[#006666] shadow-[0_10px_35px_rgba(157,188,188,0.18)] hover:-translate-y-0.5 hover:bg-[#9DBCBC] hover:shadow-[0_14px_40px_rgba(157,188,188,0.24)]",
     secondary:
-      "border border-emerald-900/15 bg-white text-emerald-950 hover:-translate-y-0.5 hover:border-emerald-700/30 hover:bg-emerald-50",
+      "border border-[#9DBCBC] bg-[#6B6B6B] text-[#FFF5BB] hover:-translate-y-0.5 hover:border-[#FFF5BB]/60 hover:bg-[#9DBCBC]",
     ghost:
-      "text-emerald-900/75 hover:bg-emerald-50 hover:text-emerald-950",
+      "text-[#B7B7B7] hover:bg-[#6B6B6B] hover:text-[#FFF5BB]",
   };
 
   return (

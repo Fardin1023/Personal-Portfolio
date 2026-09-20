@@ -163,7 +163,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="section-shell cv-auto pb-16">
       <div className="site-container">
-        <div className="contact-shell relative overflow-hidden rounded-[2rem] border border-white/[0.08] bg-[#0a101d] p-6 sm:p-9 lg:p-12">
+        <div className="contact-shell relative overflow-hidden rounded-[2rem] border border-[#9DBCBC]/60 bg-[#6B6B6B] p-6 sm:p-9 lg:p-12">
           <div className="contact-orb" aria-hidden="true" />
 
           <div className="relative grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:gap-16">
@@ -171,7 +171,7 @@ export const Contact = () => {
               <span className="section-kicker">Get in touch</span>
               <h2 className="section-title mt-4">
                 Let&apos;s build something
-                <span className="block font-serif font-normal italic text-slate-300">
+                <span className="block font-serif font-normal italic text-[#FFF5BB]">
                   useful, ambitious and memorable.
                 </span>
               </h2>
@@ -185,10 +185,10 @@ export const Contact = () => {
                     <div className="contact-info-row">
                       <span className="feature-icon !mb-0 !h-10 !w-10 !rounded-xl"><Icon size={18} /></span>
                       <span>
-                        <span className="block text-xs uppercase tracking-[.16em] text-slate-600">{label}</span>
-                        <span className="mt-1 block text-sm text-slate-200">{value}</span>
+                        <span className="block text-xs uppercase tracking-[.16em] text-[#B7B7B7]">{label}</span>
+                        <span className="mt-1 block text-sm text-[#FFF5BB]">{value}</span>
                       </span>
-                      {href && <ArrowUpRight className="ml-auto text-slate-600" size={17} />}
+                      {href && <ArrowUpRight className="ml-auto text-[#B7B7B7]" size={17} />}
                     </div>
                   );
 
@@ -264,7 +264,7 @@ export const Contact = () => {
                 </label>
 
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <p className="text-xs leading-5 text-slate-600">
+                  <p className="text-xs leading-5 text-[#B7B7B7]">
                     Messages are sent securely through this site. If delivery is temporarily unavailable, you can still contact me by email.
                   </p>
 
@@ -281,9 +281,9 @@ export const Contact = () => {
           </div>
         </div>
 
-        <footer className="flex flex-col gap-3 py-8 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+        <footer className="flex flex-col gap-3 py-8 text-xs text-[#B7B7B7] sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} Fardin Kamran.</span>
-          <a href="#top" className="transition-colors hover:text-slate-300">Back to top ↑</a>
+          <a href="#top" className="transition-colors hover:text-[#FFF5BB]">Back to top ↑</a>
         </footer>
       </div>
 
