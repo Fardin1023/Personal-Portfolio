@@ -23,51 +23,76 @@ import { Reveal } from "../components/Reveal";
 
 const projects = [
   {
-    title: "Aura-Mosaic Store",
+    title: "Aura-Mosaic",
 
-    type: "Full-Stack E-Commerce",
+    type: "AI-Powered Full-Stack E-Commerce",
 
     category: "E-Commerce",
 
     description:
-      "A modern e-commerce platform focused on product discovery, authenticated shopping experiences, cart and wishlist flows, search and filtering, and intelligent product interactions.",
+      "Aura-Mosaic is a full-stack AI-powered e-commerce platform designed for kids and women, combining a playful, modern shopping experience with intelligent product discovery. The platform includes secure authentication, product and category management, wishlist and cart functionality, COD checkout, customer profiles, order tracking, reviews, admin analytics, inventory management, and Cloudinary-based image uploads. It also features Gemini-powered AI tools, including an AI Shopping Studio, AI Gift Studio, and conversational shopping assistant that recommend only real products from the live MongoDB catalogue. The application is built with React, Node.js, Express, MongoDB Atlas, Gemini API, Cloudinary, Vercel, and Render, with responsive dual-theme UI, role-based admin access, and production deployment.",
 
     images: [
-      "/optimized/aura-mosaic.webp",
+      "/optimized/aura-mosaic-home.webp",
+      "/optimized/aura-mosaic-ai-gift-studio.webp",
+      "/optimized/aura-mosaic-admin-dashboard.webp",
+      "/optimized/aura-mosaic-admin-operations.webp",
+      "/optimized/aura-mosaic-admin-contact-inbox.webp",
     ],
 
     tags: [
       "React",
-      "Tailwind CSS",
       "Node.js",
-      "AI Integration",
+      "Express",
+      "MongoDB Atlas",
+      "Gemini API",
+      "Cloudinary",
     ],
 
-    github: null,
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB Atlas",
+      "Gemini API",
+      "Cloudinary",
+      "Vercel",
+      "Render",
+    ],
 
-    live: null,
+    github:
+      "https://github.com/Fardin1023/Aura-Mosaic-Store",
+
+    live:
+      "https://aura-mosaic-store.vercel.app/",
 
     caseStudy: {
       problem:
-        "Modern online stores need more than basic product listings. The goal was to create a richer shopping experience with authentication, personalized interactions, shopping cart management and intelligent discovery features.",
+        "Online shopping for kids and women can become repetitive and difficult to navigate when users have to manually browse large catalogues without personalized guidance, while store owners also need a reliable way to manage products, orders, customers and inventory from one place.",
 
       solution:
-        "Aura-Mosaic was developed as a full-stack e-commerce system that combines a modern React interface with backend services for authenticated shopping, product management and intelligent product interactions.",
+        "Aura-Mosaic combines a playful responsive storefront with a full e-commerce workflow and Gemini-powered shopping tools. Customers can discover, save and purchase real catalogue products, while role-based administrators manage products, categories, inventory, orders, reviews, customer activity and store operations.",
 
       architecture:
-        "The application separates the frontend presentation layer from backend business logic and data management, allowing the shopping experience and server-side functionality to evolve independently.",
+        "The platform uses a React frontend connected to a Node.js and Express backend with MongoDB Atlas as the production database. Gemini powers the AI Shopping Studio, AI Gift Studio and conversational shopping assistant, while Cloudinary handles product imagery. The frontend is deployed on Vercel and the backend on Render.",
 
       features: [
-        "Authenticated user experience",
-        "Shopping cart management",
-        "Wishlist functionality",
-        "Product search and filtering",
-        "Product recommendations",
-        "Responsive storefront interface",
+        "Secure authentication and customer profiles",
+        "Product and category management",
+        "Wishlist and shopping cart functionality",
+        "Cash-on-delivery checkout and order tracking",
+        "Customer reviews and live catalogue interactions",
+        "Admin analytics and role-based administration",
+        "Inventory management and store operations",
+        "Cloudinary-based image uploads",
+        "Gemini-powered AI Shopping Studio",
+        "Gemini-powered AI Gift Studio",
+        "Conversational AI shopping assistant grounded in real MongoDB catalogue products",
+        "Responsive dual-theme user interface",
       ],
 
       outcome:
-        "The project demonstrates a complete end-to-end e-commerce workflow while exploring modern frontend design, backend architecture and AI-assisted shopping experiences.",
+        "Aura-Mosaic delivers a production-deployed full-stack commerce experience that brings catalogue management, customer shopping flows, administration and catalogue-grounded generative AI into one responsive platform.",
     },
   },
 
