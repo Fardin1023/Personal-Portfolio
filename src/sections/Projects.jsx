@@ -23,6 +23,87 @@ import { Reveal } from "../components/Reveal";
 
 const projects = [
   {
+    title: "CraveCompass",
+
+    type: "AI-Powered Food Discovery Platform",
+
+    category: "Food Discovery",
+
+    description:
+      "CraveCompass is a full-stack food discovery platform tailored for Dhaka, combining real-time map exploration with the custom CraveAI™ Taste & Budget Engine. Users can enter an exact budget in Bangladeshi Taka, party size and cravings to receive personalized meal combinations, transparent cost estimates and curated food spots, then explore results through intelligent search, filters, interactive maps and a mobile-first interface.",
+
+    images: [
+      "/optimized/cravecompass-map.webp",
+      "/optimized/cravecompass-place-details.webp",
+      "/optimized/cravecompass-near-me.webp",
+      "/optimized/cravecompass-ai-budget.webp",
+    ],
+
+    tags: [
+      "Gemini AI",
+      "Leaflet",
+      "OpenStreetMap",
+      "Overpass API",
+      "JWT",
+      "Cyberpunk UI",
+    ],
+
+    technologies: [
+      "Google Gemini",
+      "OpenStreetMap",
+      "Leaflet",
+      "Overpass API",
+      "JWT",
+      "Bcrypt",
+      "Helmet",
+      "Rate Limiting",
+      "Natural Language Search",
+      "Geospatial Discovery",
+      "Responsive Web UI",
+      "Vercel",
+    ],
+
+    github:
+      "https://github.com/Fardin1023/CraveCompass",
+
+    live:
+      "https://cravecompass-bd.vercel.app/",
+
+    caseStudy: {
+      problem:
+        "Conventional restaurant discovery tools often start with broad restaurant categories instead of the user's actual craving, group size and spending limit. For diners in Dhaka, that can mean switching between maps, menus and price guesses without a clear answer to the practical question: what can we eat, where can we get it, and will it fit our budget?",
+
+      solution:
+        "CraveCompass combines location-aware food discovery with the CraveAI™ Taste & Budget Engine. Users specify their exact budget in BDT, party size and cravings, and the platform returns personalized meal combos, estimated costs, affordability context and a clear rationale for why each suggestion matches. Those recommendations connect directly to live map exploration, search and filtering across Dhaka's food scene.",
+
+      architecture:
+        "The platform combines Google Gemini for AI-assisted food recommendations with a localized fallback food engine, OpenStreetMap and Leaflet for interactive mapping, and the Overpass API for live discovery of eateries around geographic coordinates. Authentication uses JWT and Bcrypt, while Helmet, search sanitization and multi-tier rate limiting protect authentication, global traffic and AI endpoints. The production application is publicly deployed through Vercel.",
+
+      features: [
+        "CraveAI™ budget and taste concierge using exact ৳ BDT spending limits",
+        "Party-size-aware meal combo recommendations with cost breakdowns",
+        "Affordability tiers: Pocket Friendly, Sweet Spot, Popular Choice and Gourmet",
+        "Google Gemini recommendations with an automated localized fallback engine",
+        "Transparent 'why it matches' explanations for suggested meals and food spots",
+        "Interactive OpenStreetMap and Leaflet map exploration with custom pins and popups",
+        "Overpass API integration for live nearby eatery, cafe and food-court discovery",
+        "Natural-language place search with fuzzy apostrophe and punctuation tolerance",
+        "Cuisine, price, rating and open-now multi-criteria filtering",
+        "Mobile-first map/list toggle and adaptive search experience",
+        "Bottom-sheet place-detail drawers for compact mobile exploration",
+        "JWT authentication with Bcrypt using 12 salt rounds",
+        "Helmet HTTP security headers and multi-tier rate limiting",
+        "ReDoS-protected search sanitization",
+        "Cyberpunk-inspired gastronomic dark-mode interface with responsive design",
+      ],
+
+      outcome:
+        "CraveCompass turns food discovery into a budget-aware, craving-first experience for Dhaka. It brings AI recommendations, live geospatial discovery, intelligent search, mobile-first interaction and production-focused security together in one deployed full-stack application.",
+    },
+  },
+
+
+  {
     title: "Aura-Mosaic",
 
     type: "AI-Powered Full-Stack E-Commerce",
