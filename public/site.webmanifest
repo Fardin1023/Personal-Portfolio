@@ -1,0 +1,19 @@
+{
+  "name": "Fardin Kamran Portfolio",
+  "short_name": "Fardin",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0D1117",
+  "background_color": "#0D1117",
+  "display": "standalone"
+}
