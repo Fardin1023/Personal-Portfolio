@@ -4,6 +4,11 @@ import { Reveal } from "../components/Reveal";
 
 const certificates = [
   {
+    title: "Critical Thinking in the AI Era",
+    image: "/certificates/critical-thinking-ai-era.webp",
+    pdf: "/certificates/critical-thinking-ai-era.pdf",
+  },
+  {
     title: "Internship Completion",
     image: "/certificates/internship.webp",
     pdf: "/certificates/internship.pdf",
